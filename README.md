@@ -32,7 +32,7 @@ npm run prisma:generate
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000).
+Open https://carreriq.vercel.app/
 
 On Windows, the npm scripts automatically use the installed Next.js WASM compiler fallback if the native SWC binary cannot load.
 

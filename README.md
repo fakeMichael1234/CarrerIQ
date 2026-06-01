@@ -2,7 +2,7 @@
 
 AI-powered mock interview platform for technical candidates. CareerIQ analyzes resumes and job descriptions, runs adaptive interview sessions, scores answers across multiple dimensions, and generates a hiring-readiness report.
 
-##drive link: https://drive.google.com/file/d/1f073v8N9k7tpb95mM8rjd-t2xi0btvnt/view?usp=drive_link
+##drive link: https://drive.google.com/drive/folders/1In6ke8IbRfnN6HV-Kxt8aZN2fSwNtX4M?usp=drive_link
 
 ## Features
 

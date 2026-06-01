@@ -176,7 +176,7 @@ export default function LoginPage() {
                     Password
                   </label>
                   <Link
-                    href="/forgot-password"
+                    href="#"
                     className="text-xs text-acid/80 transition hover:text-acid"
                   >
                     Forgot password?
@@ -234,7 +234,7 @@ export default function LoginPage() {
           {/* Footer link */}
           <p className="text-center text-sm text-white/40">
             New candidate?{" "}
-            <Link href="/signup" className="font-black text-acid/90 transition hover:text-acid">
+            <Link href="#" className="font-black text-acid/90 transition hover:text-acid">
               Create a free account
             </Link>
           </p>
@@ -242,9 +242,9 @@ export default function LoginPage() {
           {/* Terms note */}
           <p className="text-center text-xs text-white/24 leading-5">
             By signing in you agree to our{" "}
-            <Link href="/terms" className="underline underline-offset-2 hover:text-white/48 transition">Terms</Link>{" "}
+            <Link href="#" className="underline underline-offset-2 hover:text-white/48 transition">Terms</Link>{" "}
             and{" "}
-            <Link href="/privacy" className="underline underline-offset-2 hover:text-white/48 transition">Privacy Policy</Link>.
+            <Link href="#" className="underline underline-offset-2 hover:text-white/48 transition">Privacy Policy</Link>.
           </p>
         </div>
       </div>

@@ -1,19 +1,44 @@
 "use client";
 
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { BrainCircuit, ArrowRight, Eye, EyeOff, Mail, Lock, Sparkles, CheckCircle2 } from "lucide-react";
 
 export default function LoginPage() {
+  const router = useRouter();
   const [showPassword, setShowPassword] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     setLoading(true);
-    setTimeout(() => setLoading(false), 1800);
+
+    try {
+      await new Promise((resolve) => setTimeout(resolve, 1200));
+      console.log("Login submit: navigating to /dashboard");
+      await router.push("/dashboard");
+    } catch (err) {
+      console.error("Error during login redirect:", err);
+    } finally {
+      setLoading(false);
+    }
+  }
+
+  async function handleSocialLogin() {
+    setLoading(true);
+
+    try {
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+      console.log("Social login: navigating to /dashboard");
+      await router.push("/dashboard");
+    } catch (err) {
+      console.error("Error during social login redirect:", err);
+    } finally {
+      setLoading(false);
+    }
   }
 
   return (
@@ -132,7 +157,9 @@ export default function LoginPage() {
                 <button
                   key={provider.label}
                   type="button"
-                  className="flex items-center justify-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-4 py-2.5 text-xs font-semibold text-white/80 transition hover:border-white/25 hover:bg-white/8 hover:text-white active:scale-[0.97]"
+                  onClick={handleSocialLogin}
+                  disabled={loading}
+                  className="flex items-center justify-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-4 py-2.5 text-xs font-semibold text-white/80 transition hover:border-white/25 hover:bg-white/8 hover:text-white active:scale-[0.97] disabled:opacity-50"
                 >
                   {provider.icon}
                   {provider.label}

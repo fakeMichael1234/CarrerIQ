@@ -83,20 +83,6 @@ prisma/
   schema.prisma
 ```
 
-## Screenshots
-
-Placeholders below can be replaced with final captures.
-
-| Screen | Placeholder |
-| --- | --- |
-| Landing Page | `screenshots/landing-page.png` |
-| Dashboard | `screenshots/dashboard.png` |
-| Resume Analysis | `screenshots/resume-analysis.png` |
-| JD Matching | `screenshots/jd-matching.png` |
-| Interview Session | `screenshots/interview-session.png` |
-| Final Report | `screenshots/final-report.png` |
-| Analytics | `screenshots/analytics.png` |
-
 ## Deployment
 
 1. Push the repository to GitHub.

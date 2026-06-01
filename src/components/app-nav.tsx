@@ -21,10 +21,10 @@ export function AppNav() {
         </div>
         <div className="flex items-center gap-2">
           <Link
-            href="/dashboard"
+            href="/login"
             className="grid size-9 place-items-center rounded-full border border-white/10 text-white/80 transition hover:border-acid/70 hover:text-acid"
-            aria-label="Open dashboard"
-            title="Open dashboard"
+            aria-label="Sign in"
+            title="Sign in"
           >
             <LogIn className="size-4" aria-hidden="true" />
           </Link>

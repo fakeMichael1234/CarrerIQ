@@ -12,21 +12,33 @@ export default function LoginPage() {
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     setLoading(true);
-    setTimeout(() => {
+
+    try {
+      await new Promise((resolve) => setTimeout(resolve, 1200));
+      console.log("Login submit: navigating to /dashboard");
+      await router.push("/dashboard");
+    } catch (err) {
+      console.error("Error during login redirect:", err);
+    } finally {
       setLoading(false);
-      router.push("/dashboard");
-    }, 1200);
+    }
   }
 
-  function handleSocialLogin() {
+  async function handleSocialLogin() {
     setLoading(true);
-    setTimeout(() => {
+
+    try {
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+      console.log("Social login: navigating to /dashboard");
+      await router.push("/dashboard");
+    } catch (err) {
+      console.error("Error during social login redirect:", err);
+    } finally {
       setLoading(false);
-      router.push("/dashboard");
-    }, 1000);
+    }
   }
 
   return (
